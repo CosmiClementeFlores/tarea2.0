@@ -1,0 +1,69 @@
+
+/**
+ * Write a description of class Matematico here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Matematico
+{
+  private int a;
+  private int b;
+  private int c;
+  private int base;
+  private int altura;
+  
+  public Matematico(int a,int b,int c,int base,int altura){
+      this.a= a;
+      this.b= b;
+      this.c= c;
+      this.base = base;
+      this.altura= altura;
+      
+    
+    }
+  public String calcularNumeros(int a,int b,int  c){
+      String respuesta ="";
+        if(a < b){
+            respuesta = "b mayor a";
+             if(b<c){
+             respuesta = "c mayor b";
+             if(a<c){
+                respuesta = "b numero del  medio";
+                }
+            }
+        }
+      return respuesta;
+    }
+    
+  public int calcularArea(int base ,int altura){
+      int area;
+      area = base* altura;
+      return area;
+    }
+  public double calcularDistacia(int x1 ,int x2,int y1 ,int y2){
+      double distancia;
+      distancia = Math.sqrt((x1-x2)*(x1-x2)+(y1-y2)*(y1-y2));
+      return distancia;
+      
+    }
+   public String calcularCuandrante(int x,int y){
+    String punto ="";
+     if(x > 0 && y > 0){
+       punto = "punto esta en el primer cuadrante";
+      
+    }else if(x >0 && y<0){
+        punto = "punto esta en el segundo cuadrante";
+      
+    }else if(x<0 && y>0){
+        punto = " punto esta en el tercer cuadrante";
+    }else if(x<0 && y>0){
+        punto = "punto esta en el cuarto cuadrante";
+    }else{
+          punto= " punto se encuentrab en el  origen";
+      return punto;
+  }
+  return punto;
+  }
+}
+
